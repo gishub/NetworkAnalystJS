@@ -1,0 +1,47 @@
+html, body, #mapDiv {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#dialog {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    padding: 5px;
+    width: 380px;
+    /*background-color: rgba(128, 128, 128, 0.6);*/
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 8px;
+    box-shadow: 0px 1px 3px #888;
+}
+#dialog input {
+    margin: 0.5em;
+    width: 20em;
+}
+input#solveRoutesBtn {
+    margin: 0.5em auto;
+    width: 8em;
+    display: block;
+}
+.dgrid-row {
+    padding:5px;
+    margin-bottom:5px;
+    min-height:50px;
+    border-bottom: solid 1px #C0C0C0;
+}
+.dgrid-row .detail div {
+    cursor: pointer;
+}
+.dgrid-row .detail div:hover {
+    text-decoration:underline;
+}
+.dgrid-row:hover {
+    background-color: rgba(128, 128, 255, 0.6);
+}
+.distance {
+    float:right;
+    color:#606060;
+    font-style:italic;
+}

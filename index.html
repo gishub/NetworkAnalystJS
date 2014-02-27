@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Routing</title>
+    <link rel="stylesheet" href="//js.arcgis.com/3.8/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="//js.arcgis.com/3.8/js/esri/css/esri.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="claro">
+    <div id="mapDiv"></div>
+    <div id="dialog">
+        <div>
+            <label for="stopsTxf">
+                <img src="http://static.arcgis.com/images/Symbols/Shapes/GreenPin1LargeB.png" width="24" height="24" />
+            </label>
+            <input type="text" id="stopsTxf" value="4.871240554373272, 45.779346908790835; 4.829613986203082, 45.72279026551544" />
+        </div>
+        <!--<div>
+            <label for="barriersTxf">
+                <img src="http://static.arcgis.com/images/Symbols/Shapes/RedPin1LargeB.png" width="24" height="24">
+            </label>
+            <input type="text" id="barriersTxf" value="">
+        </div>-->
+        <input id="solveRoutesBtn" type="button" value="Solve Route">
+        <div id="routingDetail" style="clear:both;">
+            <div id="grid"></div>
+        </div>
+    </div>
+    <!-- 
+         ========================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="//code.jquery.com/jquery.js"></script>-->
+    <script type="text/javascript">
+    var dojoConfig = {
+        async: true,
+        packages: [{
+            name: "app",
+            location: location.pathname.replace(/[^\/]+$/, '') + "js"
+        }]
+    };
+    </script>
+    <script src="//js.arcgis.com/3.8/"></script>
+    <script type="text/javascript">
+    require(["app/routing"], function(routing) {
+        routing.startup();
+    });
+    </script>
+
+</body>
+
+</html>
